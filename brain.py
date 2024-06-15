@@ -1,8 +1,7 @@
 import os
 from groq import Groq
 import pyttsx3
-from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import letter
+
 
 
 
@@ -51,29 +50,6 @@ def respond(prompt):
 
 
 
-writer_mode = {
-    "role": "system",
-    "content": 'You are a professional writer and write documents on the given topic. No other reponses are to be given. Write elaborately along with links for future further references'}
-
-writer_history= [writer_mode]
-
-    
-def prep_doc(topic):
-
-  # Append the user input to the chat history
-    writer_history.append({"role": "user", "content": topic})
-
-    response = client.chat.completions.create(model="llama3-70b-8192",
-                                            messages=writer_history,
-                                            max_tokens=10000,
-                                            temperature=1.2)
-  # Append the response to the chat history
-    writer_history.append({
-            "role": "Professional Writer",
-            "content": response.choices[0].message.content
-        })
-    doc_content= (response.choices[0].message.content)
-    return doc_content
 
 
 
