@@ -11,7 +11,7 @@ def talk(text):
     engine.runAndWait()
 
 
-client = Groq(api_key='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' )
+client = Groq(api_key='YOUR API KEY' )
 
 # Set the system prompt
 system_prompt = {
