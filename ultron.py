@@ -61,7 +61,7 @@ def runUltron():
         elif 'my' in command:
             screen_read()
         else:
-            respond(content)
+            respond(command)
     elif 'what' in command:
         if 'this' in command:
             screen_read()
