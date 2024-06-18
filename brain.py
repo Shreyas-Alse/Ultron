@@ -50,34 +50,6 @@ def respond(prompt):
 
 
 
-writer_mode = {
-    "role": "system",
-    "content": 'You are a professional writer and write documents on the given topic. No other reponses are to be given. Write elaborately along with links for future further references'}
-
-writer_history= [writer_mode]
-
-    
-
-    
-
-# Lines to write to the file
-lines = [
-    "Line 1: Hello, this is the first line.",
-    "Line 2: This is the second line.",
-    "Line 3: And this is the third line."
-]
-
-# Specify the file name
-file_name = "example.txt"
-
-# Open the file in write mode ('w')
-with open(file_name, 'w') as file:
-    # Write each line to the file with a newline character at the end
-    for line in lines:
-        file.write(line + '\n')
-
-print(f"Content written to {file_name}")
-
 
 
 
