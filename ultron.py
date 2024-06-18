@@ -3,7 +3,9 @@ import speech_recognition as sr
 import sounddevice
 from brain import respond 
 from apps import cmd_exec
-
+from brain import talk
+from screenreader import screen_read
+import os
 
 listener = sr.Recognizer()
 
@@ -33,7 +35,7 @@ def runUltron():
         if 'spotify' in command:
             cmd_exec('spotify')
         elif 'brave' in command:
-            cmd_exec_exec('brave')
+            cmd_exec('brave')
         elif 'file manager' in command:
             cmd_exec('dolphin')
         elif 'cinema' in command:
@@ -44,6 +46,34 @@ def runUltron():
             cmd_exec('code')
         else:
             respond(command)
+    
+    elif 'shutdown' in command:
+        talk('I am about to shutdown the system, Is it ok?')
+        take_command()
+        if 'yes' in command:
+            talk('initiating shutdown')
+            cmd_exec('shutdown -h now')
+        else:
+            talk('Shutdown Aborted')
+    elif 'screen' in command:
+        if 'what' in command:
+            scr_content= screen_read()
+            respond(scr_content)
+            os.remove('/home/shreyas/Ultron/screenshot.png')
+        elif 'my' in command:
+            scr_content=screen_read()
+            respond(scr_content)
+            os.remove('/home/shreyas/Ultron/screenshot.png')
+        else:
+            respond(content)
+    elif 'what' in command:
+        if 'this' in command:
+            scr_content=screen_read()
+            respond(scr_content)
+            os.remove('/home/shreyas/Ultron/screenshot.png')
+        else:
+            respond(command)
+
     else:
         respond(command)
         
