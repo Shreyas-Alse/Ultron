@@ -1,0 +1,9 @@
+pyttsx3
+SpeechRecognition
+groq
+pyaudio
+setup-tools
+soundevice
+AppOpener
+pytesseract
+mss

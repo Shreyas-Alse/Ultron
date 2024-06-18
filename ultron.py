@@ -57,14 +57,30 @@ def runUltron():
             talk('Shutdown Aborted')
     elif 'screen' in command:
         if 'what' in command:
+<<<<<<< HEAD
             screen_read()
         elif 'my' in command:
             screen_read()
+=======
+            scr_content= screen_read()
+            respond(scr_content)
+            os.remove('/home/shreyas/Ultron/screenshot.png')
+        elif 'my' in command:
+            scr_content=screen_read()
+            respond(scr_content)
+            os.remove('/home/shreyas/Ultron/screenshot.png')
+>>>>>>> cda5e7718c861f4d94b24bdc416e41beebec4d38
         else:
             respond(content)
     elif 'what' in command:
         if 'this' in command:
+<<<<<<< HEAD
             screen_read()
+=======
+            scr_content=screen_read()
+            respond(scr_content)
+            os.remove('/home/shreyas/Ultron/screenshot.png')
+>>>>>>> cda5e7718c861f4d94b24bdc416e41beebec4d38
         else:
             respond(command)
 
