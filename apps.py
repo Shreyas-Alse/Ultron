@@ -1,6 +1,7 @@
 import subprocess
 import os
 from brain import talk
+import webbrowser
 
 
 def cmd_exec(app):
@@ -15,4 +16,8 @@ def cmd_exec(app):
                      preexec_fn=os.setsid)
 
 
+def open_site(url):
+    text = 'opening', url
+    talk(text)
+    webbrowser.open(url)
 

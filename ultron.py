@@ -6,6 +6,9 @@ from apps import cmd_exec
 from brain import talk
 from screenreader import screen_read
 import os
+from apps import open_site
+
+
 
 listener = sr.Recognizer()
 
@@ -34,8 +37,8 @@ def runUltron():
     elif 'open' in command:
         if 'spotify' in command:
             cmd_exec('spotify')
-        elif 'brave' in command:
-            cmd_exec('brave')
+        elif 'vivaldi' in command:
+            cmd_exec('vivaldi')
         elif 'file manager' in command:
             cmd_exec('dolphin')
         elif 'cinema' in command:
@@ -43,7 +46,14 @@ def runUltron():
         elif 'terminal' in command:
             cmd_exec('konsole')
         elif 'code' in command:
-            cmd_exec('code')
+            if 'your' in command:
+                open_site('https://github.com/Shreyas-Alse/Ultron')
+            else:
+                cmd_exec('code')
+        elif 'github' in command:
+            open_site('https://github.com')
+        elif 'youtube' in command:
+            open_site('https://youtube.com')
         else:
             respond(command)
     
