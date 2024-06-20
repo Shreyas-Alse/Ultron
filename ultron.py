@@ -54,6 +54,8 @@ def runUltron():
             open_site('https://github.com')
         elif 'youtube' in command:
             open_site('https://youtube.com')
+        elif 'browser' in command:
+            cmd_exec('vivaldi')
         else:
             respond(command)
     
@@ -73,6 +75,11 @@ def runUltron():
         else:
             respond(command)
     elif 'what' in command:
+        if 'this' in command:
+            screen_read()
+        else:
+            respond(command)
+    elif 'help' in command:
         if 'this' in command:
             screen_read()
         else:
