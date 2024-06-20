@@ -7,7 +7,7 @@ from brain import talk
 from screenreader import screen_read
 import os
 from apps import open_site
-
+import webbrowser
 
 
 listener = sr.Recognizer()
@@ -58,7 +58,18 @@ def runUltron():
             cmd_exec('vivaldi')
         else:
             respond(command)
-    
+    elif 'play' in command:
+        url = "https://www.youtube.com/results?search_query=" + command.replace("play", "+")
+        webbrowser.open(url)
+        respond(command)
+    elif 'show' in command:
+        url = "https://www.youtube.com/results?search_query=" + command.replace("play", "+")
+        webbrowser.open(url)
+        respond(command)
+    elif 'get' in command:
+        url = "https://www.google.com/search?q=" + command.replace("get", "+")
+        webbrowser.open(url)
+        respond(command)
     elif 'shutdown' in command:
         talk('I am about to shutdown the system, Is it ok?')
         take_command()
