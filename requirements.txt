@@ -6,4 +6,6 @@ setup-tools
 soundevice
 AppOpener
 pytesseract
-mss
+pyautogui
+cv2
+numpy

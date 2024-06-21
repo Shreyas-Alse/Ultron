@@ -1,23 +1,23 @@
 import mss
 import mss.tools
-from PIL import Image
+import subprocess
 import pytesseract
 import os
 from brain import respond
+from PIL import Image
 
 
 def screen_read():
-    with mss.mss() as sct:
-        screenshot = sct.shot(output='screenshot.png')
-    image = Image.open("screenshot.png")
-    text = pytesseract.image_to_string(image)
-    respond(text)
     try:
-        os.remove('/home/shreyas/Ultron/screenshot.png')
+        with mss.mss() as sct:
+            screenshot = sct.shot(output='screenshot.png')
+        image = Image.open("screenshot.png")
+        text = pytesseract.image_to_string(image)
+        respond(text)
     except:
-        pass
 
-
-
-    
+        subprocess.run(['spectacle', '-b', '-o', 'screenshot.png'], check=False)
+        image = Image.open("screenshot.png")
+        text = pytesseract.image_to_string(image)
+        respond(text)
 

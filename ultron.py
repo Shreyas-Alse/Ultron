@@ -24,6 +24,7 @@ def take_command():
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
+            print('You said:', command)
         
     except:
         pass
