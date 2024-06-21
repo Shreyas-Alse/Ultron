@@ -83,6 +83,8 @@ def runUltron():
             screen_read()
         elif 'my' in command:
             screen_read()
+        elif command == '':
+            talk('There is nothing significant on your screen')
         else:
             respond(command)
     elif 'what' in command:
