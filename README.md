@@ -1,4 +1,3 @@
 # Ultron
-Desktop assistant running in Ultra fast groq brain.
-Personality tweaking is now possible.
-Screen Reader Added
+Desktop assistant with Ultra fast groq api for its brain.
+Let us build the one desktop assistant to kill them all
