@@ -10,10 +10,8 @@ def talk(text):
     engine.say(text)
     engine.runAndWait()
 
-
 client = Groq(api_key='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' )
 
-# Set the system prompt
 system_prompt = {
     "role": "system",
     "content": ""}
@@ -37,7 +35,7 @@ def respond(prompt):
     response = client.chat.completions.create(model="llama3-70b-8192",
                                             messages=chat_history,
                                             max_tokens=10000,
-                                            temperature=1.2)
+                                            temperature=1.8)
 
     chat_history.append({
             "role": "assistant",
