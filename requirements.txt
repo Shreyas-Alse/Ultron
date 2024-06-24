@@ -9,3 +9,5 @@ pytesseract
 mss
 subprocess 
 speedtest-cli
+webbrowser
+Pillow
