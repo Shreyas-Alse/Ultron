@@ -8,6 +8,7 @@ from screenreader import screen_read
 import os
 from apps import open_site
 import webbrowser
+from speed_test import test_speed
 
 
 listener = sr.Recognizer()
@@ -91,11 +92,18 @@ def runUltron():
     elif 'what' in command:
         if 'this' in command:
             screen_read()
+        elif 'internet speed' in command:
+            test_speed()
         else:
             respond(command)
     elif 'help' in command:
         if 'this' in command:
             screen_read()
+        else:
+            respond(command)
+    elif 'run' in command:
+        if 'speed test' in command:
+            test_speed()
         else:
             respond(command)
 
