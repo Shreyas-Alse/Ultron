@@ -57,7 +57,7 @@ def runUltron():
         elif 'youtube' in command:
             open_site('https://youtube.com')
         elif 'browser' in command:
-            cmd_exec('vivaldi')
+            cmd_exec('chromium')
         else:
             respond(command)
     elif 'play' in command:
