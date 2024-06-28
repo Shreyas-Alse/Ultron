@@ -16,7 +16,7 @@ system_prompt = {
     "role": "system",
     "content": ""}
 
-file_path = '/home/shreyas/Ultron/personality.txt'
+file_path = '/home/shreyas/Ultron/personality.txt' # Replace path with yours
 
 with open(file_path, 'r') as file:
     file_content = file.read()
