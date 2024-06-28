@@ -17,4 +17,4 @@ replace path_to_Ultron_folder with the actual path
 
 # Disclaimer
 Please do not expect me to regularly update ultron as i study in a hostel where no electronic devices are allowed
-I will update it whenever i com ehome for vacation
+I will update it whenever i come home for vacation
