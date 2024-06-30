@@ -8,5 +8,5 @@ def test_speed():
     download= str(st.download())
     upload = str(st.upload())
     result = 'Download speed: ' + download + 'Upload speed:' + upload
-    content= 'Tell me about my internet speed' + result
+    content= 'Tell me about my internet speed with the numbers' + result
     respond(content)
