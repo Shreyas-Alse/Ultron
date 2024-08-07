@@ -1,7 +1,10 @@
 ## Ultron
 Desktop assistant with Ultra fast groq api for its brain.
 Let us build the one desktop assistant to kill them all
-(Installation of Tessearact is reqired)
+(Installation of Tessearact is reqired.
+# Announcement 
+I am happy to announce that Ultron has won 1st place in regional exhibition and has been selected for National level Exhibition.
+
 # Install tesseract by using System Package manager
 Debian Based Distros: sudo apt install tesseract
 Fedora: sudo dnf install tesseract
