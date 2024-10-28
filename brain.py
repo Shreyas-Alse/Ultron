@@ -10,13 +10,13 @@ def talk(text):
     engine.say(text)
     engine.runAndWait()
 
-client = Groq(api_key='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' )
+client = Groq(api_key= os.environ.get('MIND_STONE'))
 
 system_prompt = {
     "role": "system",
     "content": ""}
 
-file_path = '/home/shreyas/Ultron/personality.txt' # Replace path with yours
+file_path = '/home/shreyas/Ultron/Ultron/personality.txt' # Replace path with yours
 
 with open(file_path, 'r') as file:
     file_content = file.read()
@@ -34,7 +34,7 @@ def respond(prompt):
 
     response = client.chat.completions.create(model="llama3-70b-8192",
                                             messages=chat_history,
-                                            max_tokens=10000,
+                                            max_tokens=1000,
                                             temperature=1.8)
 
     chat_history.append({

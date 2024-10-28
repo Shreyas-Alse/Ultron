@@ -8,7 +8,7 @@ from screenreader import screen_read
 import os
 from apps import open_site
 import webbrowser
-from speed_test import test_speed
+#from speed_test import test_speed
 
 
 listener = sr.Recognizer()
