@@ -34,7 +34,7 @@ def respond(prompt):
 
     response = client.chat.completions.create(model="llama3-70b-8192",
                                             messages=chat_history,
-                                            max_tokens=1000,
+                                            max_tokens=500,
                                             temperature=1.8)
 
     chat_history.append({
