@@ -15,9 +15,13 @@ def screen_read():
         text = pytesseract.image_to_string(image)
         respond(text)
     except:
+        try:
+            subprocess.run(['spectacle', '-b', '-o', 'screenshot.png'], check=False)
+            image = Image.open("screenshot.png")
+            text = pytesseract.image_to_string(image)
+            respond(text)
+        except:
+            pass
 
-        subprocess.run(['spectacle', '-b', '-o', 'screenshot.png'], check=False)
-        image = Image.open("screenshot.png")
-        text = pytesseract.image_to_string(image)
-        respond(text)
+
 
